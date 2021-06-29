@@ -1,0 +1,1 @@
+In the manifest you can do minimal-ui or fullscreen or standalone

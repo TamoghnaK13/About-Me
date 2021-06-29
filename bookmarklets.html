@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TK's Bookmarklet Archive</title>
+    <meta name="description" content="A collection of the best bookmarklets avaliable to everyone!">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://old.gbasil.dev/plugins/highlight/highlight.pack.js/js/footer.js"></script>
+    <script async src="https://arc.io/widget.min.js#7h7Kngit"></script>
+    <link rel="stylesheet" href="https://old.gbasil.dev/plugins/highlight/styles/agate.css">
+    <script rel="preload" src="/shortcut.js"></script>
+    <script src="https://old.gbasil.dev/plugins/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+      /*headers*/
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      /*text*/
+      @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;900&display=swap');
+
+
+      body {
+        font-family: sans-serif;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+      }
+      
+      body * {
+        outline: 0;
+      }
+      
+      div.main {
+        width: 800px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #a4a4a4;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+      }
+      
+      span p {
+        color: #0f0f0f;
+      }
+      
+      a.bk {
+        color: #4183c4;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      .store {
+        color: #e8cc17;
+        text-decoration: none;
+      }
+      
+      code {
+        border-radius: 5px;
+      }
+      
+      .smoldesc {
+        font-size: 15px;
+      }
+      
+      iframe {
+        border: 0px solid transparent;
+      }
+    </style>
+
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Bookmarklet Archive</h1>
+      <hr>
+      <p>The most extensive bookmarklet archive list.</p>
+      <p>Bookmarklets are short snippets of JavaScript that can be executed by clicking on a, well, bookmark. That's where they get the name from. I have compiled a list of some free and public bookmarklets here for anyone to use. I don't remember the authors of some of them, but I claim no ownership over any of the following bookmarklets (Thanks to GBasil @ GBasil.dev for many of the listed ones). To install a bookmarklet, simply drag it to your bookmark bar, and then you can click it to activate it.</p>
+      <hr>
+      <div class="bookmarklets">
+        <span><h1>- Fun -</h1>
+          <span class="bookmarklet">
+            <h2>Autoclicker</h2>
+            <p>Automatically clicks the selected element.</p>
+            <a class="bk" href='javascript:var DELAY = 1;var autoClickerStyleElement = document.createElement("style");autoClickerStyleElement.innerHTML="*{cursor: crosshair !important;}";document.body.appendChild(autoClickerStyleElement);function addClicker(e) {if(!e.isTrusted) {return;}if(e.target.classList.contains("auto-clicker-target")) {e.target.classList.remove("auto-clicker-target");} else {e.target.classList.add("auto-clicker-target");}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener("click", addClicker);e.preventDefault();autoClick(e.target);}function autoClick(element) {if(element.classList.contains("auto-clicker-target")) {element.click();setTimeout(function(){ autoClick(element); }, DELAY);}}document.body.addEventListener("click", addClicker, 0);'>Autoclicker</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>dudl.me</h2>
+            <p>Draw on the current webpage. More info at <a href="http://dudl.me/">dudl.me</a>.</p>
+            <a class="bk" href="javascript: (function () { if (window.goggles && window.goggles.active) { window.goggles.stop(); } else { window.GOGGLE_SERVER='//dudl.me/page'; var scr = document.createElement('script'); scr.type = 'text/javascript'; scr.src = '//dudl.me/bookmarklet.js?rand='+Math.random(); document.documentElement.appendChild(scr); } })();">dudl.me</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>dudl classic</h2>
+            <p>The classic version of dudl.me. More info at <a href="http://dudl.us/">dudl.us</a>.</p>
+            <a class="bk" href="javascript: (function () { if (window.goggles && window.goggles.active) { window.goggles.stop(); } else { window.GOGGLE_SERVER='//dudl.us/page'; var scr = document.createElement('script'); scr.type = 'text/javascript'; scr.src = '//dudl.us/bookmarklet.js?rand='+Math.random(); document.documentElement.appendChild(scr); } })();">dudl classic</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Capitalise</h2>
+            <p>Change all the text on a page to be capital letters.</p>
+            <a class="bk" href='javascript:(function(){document.body.style.textTransform="uppercase";}());'>Capitalise</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Decapitalise</h2>
+            <p>Change all the text on a page to be lowercase letters.</p>
+            <a class="bk" href='javascript:(function(){document.body.style.textTransform="lowercase";}());'>Decapitalise</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>G-ifier</h2>
+            <p>Replaces all letters with the letter "g".</p>
+            <a class="bk" href="javascript: javascript:(function() { window.g = function() { function G(element) { if (element.childNodes.length > 0) for (var i = 0; i < element.childNodes.length; i++) { if(element.childNodes[i].nodeName.toLowerCase() !== 'style' && element.childNodes[i].nodeName.toLowerCase() !== 'script') { G(element.childNodes[i]); } } if (element.nodeType === Node.TEXT_NODE && element.nodeValue !== '') { element.textContent = element.textContent.replace(/[a-z]/g, 'g').replace(/[A-Z]/g, 'G'); } } var html = document.getElementsByTagName('html')[0]; G(html); }; g(); })();">G-ifier</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>The Bieberifier</h2>
+            <p>Changes all images to a picture of Justin Bieber.</p>
+            <a class="bk" href="javascript:(function(){Array.prototype.slice.call(document.querySelectorAll('img')).map(function(el){el.src = 'https://codebox.net/assets/images/monkeyshine/bieber.jpg';});}())">The Bieberifier</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Invert Colors</h2>
+            <p>Inverts the colors on a page.</p>
+            <a class="bk" href="javascript:function loadScript(scriptURL) { var scriptElem = document.createElement('SCRIPT'); scriptElem.setAttribute('language', 'JavaScript'); scriptElem.setAttribute('src', scriptURL); document.body.appendChild(scriptElem); }  loadScript('http://tonymuka.com/js/invert.js');">Invert Colors</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Snake in 849 bytes</h2>
+            <p>A snake codegolf (look it up) in just 849 bytes. More info on <a href="https://chengsun.uk/snake.html">the creators website</a>.</p>
+            <a class="bk" href='javascript:Q=64;m=b=Q*Q;a=[P=l=u=d=p=S=w=0];u=89;f=(h=j=t=(b+Q)/2)-1;(B=(D=document).body).appendChild(x=D.createElement("p"));(X=x.style).position="fixed";X.left=X.top=0;X.background="#FFF";x.innerHTML="<p></p><canvas>";v=(s=x.childNodes)[0];(s=s[1]).width=s.height=5*Q;c=s.getContext("2d"); onkeydown=onblur=F=function(e,g){g?a[f]?(w+=m,f=Math.random(l+=8)*(R=Q-2)*R|(u=0),F(f+=Q+1+2*(f/R|0),g)):F(f):0>e?(l?--l:(y=t,t=a[t]-2,F(y)),S+=(w*=0.8)/4,m=999/(u++ +10),a[h+=[-1,-Q,1,Q][d=p]]?B.removeChild(x,alert("Game Over")):(F(h),F(e,j=h),v.innerHTML=P?(setTimeout(F,50,e,0),S|0):"Press P")):-e?(y=(a[e]=e<Q|e>=Q*Q-Q|!(e%Q)|e%Q==Q-1|2*(e==h))+(e==f),e==h&&(a[j]=2+h),c.fillStyle="hsl("+99*!a[e]+","+2*m+"%,"+50*y+"%)",c.fillRect(e%Q*5,5*(e/Q|0),5,5)):isNaN(y=e.keyCode-37)|43==y?(P=y&&!P)&&F(-1): p=!P|y&-4|!(y^2^d)?p:y;return!1};for(;--b;F(b));void F(-1);'>Snake</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Glitch</h2>
+            <p>Messes with the text to give a "glitch" effect.</p>
+            <a class="bk" href="javascript: (function() {  window.__glitch_runs = window.__glitch_runs ? window.__glitch_runs + 1 : 1;  const MODES = {    STANDARD: 'STANDARD',    TURBO: 'TURBO'  };  const OPTIONS = Object.assign(    { G_T: false, G_I: true, TURBO: false },    {G_T:true} || {}  );  const GLITCH_TEXT = OPTIONS.G_T;  const GLITCH_IMAGES = OPTIONS.G_I;  const MODE = OPTIONS.TURBO ? MODES.TURBO : MODES.STANDARD;  if (MODE === MODES.TURBO) {    window.__glitch_runs = 3;  }  const transformTranspose = (header, input, gap = 1) => {    const idx =      header + Math.floor(Math.random() * (input.length - header - gap));    const tmp = input[idx];    input[idx] = input[idx + gap];    input[idx + gap] = tmp;    return input;  };  const transformSubstitute = (header, input) => {    const by = Math.floor(Math.random() * 256);    const idx = header + Math.floor(Math.random() * (input.length - header));    input[idx] = by;    return input;  };  const transformText = str => {    let bytes = new TextEncoder('utf-8').encode(str);    const errors = Math.random() * (0.05 * str.length);    for (let i = 0; i < errors; i += 1) {      bytes =        Math.random() > 0.5          ? transformSubstitute(0, bytes)          : transformTranspose(            0,            bytes,            Math.floor(Math.random() * str.length - 1) + 1          );    }    const string = new TextDecoder('utf-8').decode(bytes);    return string;  };  const glitchImage = image => {    try {      image.onload = () => {};      image.style.backgroundColor = '#262626';      const canvas = document.createElement('canvas');      const context = canvas.getContext('2d');      canvas.width = image.naturalWidth;      canvas.height = image.naturalHeight;      context.drawImage(image, 0, 0);      const data = canvas.toBlob(blob => {        const fileReader = new FileReader();        fileReader.onload = event => {          const data =            blob.size === event.target.result.byteLength              ? new Uint8Array(event.target.result)              : null;          image.onerror = () => {            image.src = URL.createObjectURL(blob);          };          const glitchOnce = () => {            const errors = Math.random() * 10 * window.__glitch_runs;            let corrupted = data.slice(0);            for (let i = 0; i < errors; i++) {              corrupted =                Math.random() > 0.5                  ? transformTranspose(100, corrupted)                  : transformSubstitute(100, corrupted);            }            const corruptBlob = new Blob([corrupted], { type: 'image/png' });            const corruptSrc = URL.createObjectURL(corruptBlob);            image.src = corruptSrc;          };          const glitchImageRaf = () => {            glitchOnce();            window.requestAnimationFrame(glitchImageRaf);          };          const glitchImageTimeout = (max = 300) => {            glitchOnce();            window.setTimeout(() => {              glitchImageTimeout(max);            }, Math.random() * max / 2 + Math.random() * max / 2);          };          if (MODE === MODES.STANDARD) {            glitchImageTimeout();          } else if (MODE === MODES.TURBO) {            glitchImageRaf();          }        };        fileReader.readAsArrayBuffer(blob);      }, 'image/jpeg');    } catch (e) {      return false;    }  };  const glitchText = n => {    const original = n.textContent;    const glitchText = () => {      n.textContent = transformText(original).replace(/%EF%BF%BD/g, '');    };    const glitchTextTimeout = (max = 1000) => {      glitchText();      window.setTimeout(() => {        glitchTextTimeout(max);      }, Math.random() * max / 2 + Math.random() * max / 2);    };    const glitchTextRaf = () => {      glitchText();      window.requestAnimationFrame(glitchTextRaf);    };    glitchTextTimeout();  };  const textNodesUnder = el => {    let n;    const a = [];    const walk = document.createTreeWalker(      el,      NodeFilter.SHOW_TEXT,      null,      false    );    while ((n = walk.nextNode())) {      a.push(n);    }    return a;  };  const setupGlitch = () => {    if (GLITCH_IMAGES) {      const images = document.querySelectorAll('img');      images.forEach(i => {        i.complete          ? glitchImage(i)          : (i.onload = event => glitchImage(event.target));      });    }    if (GLITCH_TEXT) {      const textNodes = textNodesUnder(document.body).filter(        n => n.textContent && n.textContent.length > 0 && n.textContent.trim()      );      textNodes.forEach(glitchText);    }  };  if (document.readyState === 'complete') {    setupGlitch();  } else {    document.body.addEventListener('load', setupGlitch);  }})();">Glitch</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Retro</h2>
+            <p>Makes your screen look like an old monitor.</p>
+            <a class="bk" href="javascript: (function () {  const css = `    :root {      --filter-chain: sepia(90%) invert(100%) hue-rotate(180deg) blur(0.2px) brightness(170%);    }    body {      background-blend-mode: overlay;      background-color: #0A0A0A;      text-shadow:        0 0 5px rgba(1, 1, 1, 0.8),        0 0 1em rgba(255, 200, 200, 0.6),        0 0 10px rgba(255, 192, 192, 0.3);    }    body > *:not(.mt-overlay) {      background-blend-mode: overlay;      background-color: transparent;      filter: var(--filter-chain) !important;      -webkit-filter: var(--filter-chain) !important;    }    img, video {      --filter-chain: invert(100%) blur(1px) brightness(80%);      filter: var(--filter-chain);      -webkit-filter: var(--filter-chain);    }    .mt-overlay {      position: fixed;      top: 0;      left: 0;      width: 100%;      height: 100%;      z-index: 2147483647;      pointer-events: none;    }    #mt-grill {      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAJ1BMVEUAAGwAANkAAP8ALAAANAAAbAAA2QAA3gAA4QAA/wBsAADZAAD/AACoIOABAAAAVUlEQVR42u2RwQ3AIAwDHVoMIew/bxdIJPj14Z91VhRLhxWxOtlhdpQRewfdaa3ZSb4+uJ/EJ68rDp/5gIrDR15UHPPNX1dcHuRBHuRBHuRBHv7r4QOHFTeZ7vvIdwAAAABJRU5ErkJggg==);      background-size: 17px;      mix-blend-mode: soft-light;    }    #mt-noise {      background-image: url(https://gyng.github.io/maketerm/i/noise.gif); /* Too big for a bookmarklet */      background-size: 60px;      mix-blend-mode: hard-light;      opacity: 0.4;    }    #mt-scanlines {      background-image: url(https://gyng.github.io/maketerm/i/scanlines.gif); /* Too big for a bookmarklet */      background-size: 192px;      mix-blend-mode: screen;      opacity: 0.1;    }    #mt-orange {      background-color: #FCE05F;      mix-blend-mode: color-burn;      opacity: 0.5;    }  `;  const style = document.createElement('style');  style.type = 'text/css';  if (style.styleSheet) {    style.styleSheet.cssText = css;  } else {    style.appendChild(document.createTextNode(css));  }  document.head.appendChild(style);  const makeOverlay = (id) => Object.assign(document.createElement('div'), { id, className: 'mt-overlay' });  const makeAndAddOverlay = (id) => document.body.appendChild(makeOverlay(id));  ['mt-grill', 'mt-noise', 'mt-scanlines', 'mt-orange'].forEach(makeAndAddOverlay);  console.log('%EF%BC%A8%EF%BC%A5%EF%BC%AC%EF%BC%AC%EF%BC%AF%E3%80%80%EF%BC%B7%EF%BC%AF%EF%BC%B2%EF%BC%AC%EF%BC%A4');}());">Retro</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Blur</h2>
+            <p>Adds a blur filter to the page.</p>
+            <a class="bk" href="javascript: (function () { document.body.style.filter = 'blur(5px)'; })();">Blur</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Flip Horizontal</h2>
+            <p>Flips the page horizontally.</p>
+            <a class="bk" href="javascript: (function () { document.body.style.transform = 'scaleX(-1)'; })();">Flip Horizontal</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Flip 180°</h2>
+            <p>Flips the page by 180°.</p>
+            <a class="bk" href="javascript:(function(){['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix){document.body.style[prefix + 'transform'] = 'rotate(180deg)';});}())">Flip 180°</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Flip Images</h2>
+            <p>Turns all images upside-down.</p>
+            <a class="bk" href="javascript:(function(){['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix){Array.prototype.slice.call(document.querySelectorAll('img')).map(function(el){el.style[prefix + 'transform'] = 'rotate(180deg)';});});}())">Flip Images</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Grayscale</h2>
+            <p>Applies a grayscale filter to the page.</p>
+            <a class="bk" href="javascript: (function () { document.body.style.filter = 'grayscale(1)'; })();">Grayscale</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>fontBomb</h2>
+            <p>Create bombs to destroy text.</p>
+            <a class="bk" href="javascript:(function () {var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);}());">fontBomb</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Kick Ass</h2>
+            <p>A bookmarklet to destroy webpages in a fun manner. More info at <a href="https://kickassapp.com/">kickassapp.com</a></p>
+            <a class="bk" href="javascript:(function () {var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);}());">Kick Ass</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Random Orientations</h2>
+            <p>A bookmarklet that makes small adjustments to the orientation of various elements on the page, giving it a nice 'broken' look.</p>
+            <a class="bk" href="javascript:(function(){['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix){Array.prototype.slice.call(document.querySelectorAll('div,p,span,img,a,body')).map(function(el){el.style[prefix + 'transform'] = 'rotate(' + (Math.floor(Math.random() * 3) - 1) + 'deg)';});});}())">Random Orientations</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Rotate Page Booby Trap</h2>
+            <p>This script does nothing until someone presses a key on keyboard or moves the mouse, then it rotates the page 180°. After you run the script there is a 5 second pause before the trap is activated.</p>
+            <a class="bk" href="javascript:(function(){setTimeout(function(){document.onmousemove = document.onkeypress = function(){['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix){document.body.style[prefix + 'transition'] = prefix + 'transform 3s';document.body.style[prefix + 'transform'] = 'rotate(180deg)';});}}, 5000);}())">Rotate Page Booby Trap</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>I Like Frogs</h2>
+            <p>This script replaces any text that the victim enters with the words 'I like frogs'. More info at <a href="http://codebox.org.uk/pages/monkeyshine-javascript-practical-jokes">their website</a>.</p>
+            <a class="bk" href="javascript:(function(){(function(){var TEXT = 'i like frogs ';Array.prototype.slice.call(document.querySelectorAll('input[type=text],textarea')).map(function(el){el.onkeypress=function(evt){var charCode = typeof evt.which == 'number' ? evt.which : evt.keyCode;if (charCode && charCode > 31) {var start = this.selectionStart, end = this.selectionEnd;this.value = this.value.slice(0, start) + TEXT[start % TEXT.length] + this.value.slice(end);this.selectionStart = this.selectionEnd = start + 1;}return false;}});}());}())">I Like Frogs</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Uglify</h2>
+            <p>Changes element colors and sizes. Try it out.</p>
+            <a class="bk" href="javascript:(function(){var elems=document.getElementsByTagName('*');for(var i = 0; i<elems.length;i++){elems[i].style.fontFamily='Comic Sans MS';elems[i].style.fontSize=Math.random()*75+'px';elems[i].style.color='#'+Math.random().toString(16).slice(2, 8);elems[i].style.backgroundColor='#'+Math.random().toString(16).slice(2,8)}})();document.onclick=function(){(function(){var d=0;setInterval(function(){document.body.style['-webkit-transform']= 'rotate('+ d +'deg)';d+=1},100)}());};">Uglify</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Asteroids</h2>
+            <p>A less advanced version of Kick Ass. Fly a spaceship around like classic asteroids and destroy elements.</p>
+            <a class="bk" href="javascript:var s=document.createElement('script');s.type='text/javascript';s.onerror=function(e){alert('Failed to load the script. The site\'s Content Security Policy might be blocking it. Feel free to try again.');};document.body.appendChild(s);s.src='https://blog.roysolberg.com/js/dom2.min.js';void(0);">Asteroids</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Katamari</h2>
+            <p>Play with a ball that picks stuff up and grows in size. More info at <a href="http://kathack.com/">kathack.com</a>.</p>
+            <a class="bk" href="javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);">Katamari</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Snow</h2>
+            <p>Pick a letter or message and a color and watch it snow from the top of the screen.</p>
+            <a class="bk" href="javascript: (function() {    var letter = prompt('What letter?');    var color = prompt('What color?');    var container = document.createElement('div');    document.body.appendChild(container);    container.style.position = 'fixed';    container.style.top = '0';    container.style.left = '0';    container.style.width = '100%';    container.style.height = '100%';    container.style.overflow = 'hidden';    container.style.pointerEvents = 'none';    function init() {        var injection = document.createElement('style');        document.body.appendChild(injection);        injection.innerHTML = '@-webkit-keyframes snow {\nfrom {top:-1%;}\nto{top:121%;}}\n@-moz-keyframes snow {\nfrom {top: -1%;}\nto {top: 121%;}\n}';    }    init();    window.setInterval(createParticle, 200);    timeChoices = [5, 6, 7, 8, 9, 10];    function destroy(evt) {        container.removeChild(evt.target);    }    function createParticle() {        var particle = document.createElement('span');        var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];        particle.innerHTML = letter;        particle.className = 'flake';        particle.style.position = 'absolute';        particle.style.color = color;        particle.style.backgroundColor = 'transparent';        particle.style.width = '5px';        particle.style.height = '5px';        particle.style.pointerEvents = 'none';        particle.style.right = Math.random() * 100 + '%';        particle.style.borderRadius = '50%';        particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';         particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';        container.appendChild(particle);        particle.addEventListener('webkitAnimationEnd', destroy);         particle.addEventListener('AnimationEnd', destroy);    }})()">Snow</a>
+          </span>
+          
+        </span>
+        <span><h1>- Developer -</h1>
+        
+          <span class="bookmarklet">
+            <h2>Slayeroffice suite</h2>
+            <p>A menu with a bunch of usefull utilities. More info at <a href="http://slayeroffice.com/?c=/content/tools/suite.html">slayeroffice.com</a>.</p>
+            <a class="bk" href="javascript:s=document.body.appendChild(document.createElement('script'));s.id='fs';s.language='javascript';void(s.src='http://slayeroffice.com/tools/suite/suite.js');">Slayeroffice suite</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>X-ray</h2>
+            <p>A bookmarklet to get advanced info about elements.</p>
+            <a class="bk" href="javascript:function loadScript(scriptURL) { var scriptElem = document.createElement('SCRIPT'); scriptElem.setAttribute('language', 'JavaScript'); scriptElem.setAttribute('src', scriptURL); document.body.appendChild(scriptElem);}loadScript('http://westciv.com/xray/thexray.js');">X-ray</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>X-ray Goggles</h2>
+            <p>A script to edit elements. More info at <a href="https://x-ray-goggles.mouse.org/">x-ray-goggles.mouse.org</a></p>
+            <a class="bk" href="javascript:(function () {var script=document.createElement('script');script.src='https://x-ray-goggles.mouse.org/webxray.js';script.className='webxray';script.setAttribute('data-lang','en-US');script.setAttribute('data-baseuri','https://x-ray-goggles.mouse.org');document.body.appendChild(script);}())">X-ray Goggles</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Toggle CSS</h2>
+            <p>Toggle the CSS on a website off and on.</p>
+            <a class="bk" href='javascript:(function(){function d(a,b){a.setAttribute("data-css-storage",b)}function e(a){var b=a.getAttribute("data-css-storage");a.removeAttribute("data-css-storage");return b}var c=[];(function(){var a=document.body,b=a.hasAttribute("data-css-disabled");b?a.removeAttribute("data-css-disabled"):a.setAttribute("data-css-disabled","");return b})()?(c=document.querySelectorAll("[data-css-storage]"),[].slice.call(c).forEach(function(a){"STYLE"===a.tagName?a.innerHTML=e(a):"LINK"===a.tagName?a.disabled=!1:a.style.cssText=e(a)})):(c=document.querySelectorAll("[style], link, style"),[].slice.call(c).forEach(function(a){"STYLE"===a.tagName?(d(a,a.innerHTML),a.innerHTML=""):"LINK"===a.tagName?(d(a,""),a.disabled=!0):(d(a,a.style.cssText),a.style.cssText="")}))})();'>Toggle CSS</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>JS Console</h2>
+            <p>Creates a small console for you to type JavaScript and run it on the page.</p>
+            <a class="bk" href="" id="console">JS Console</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Restore Rightclick</h2>
+            <p>Unblocks the right click if a page blocks it.</p>
+            <a class="bk" href="javascript:void(document.onmousedown='return true');void(document.onmouseup='return true');void(document.oncontextmenu='return true')">Restore Rightclick</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Bookmarklet Tools</h2>
+            <p>A small menu with some usefull code snippets.</p>
+            <a class="bk" href='javascript:(function(){var x=new XMLHttpRequest;x.open("GET","https://bookmarks.matdoes.dev/code.js"),x.send(),x.onreadystatechange=function(){4==x.readyState&&eval(x.responseText)}})()'>Bookmarklet Tools</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>jQuerify</h2>
+            <p>A utility script that checks if jQuery is on a page, and if it isn't, adds jQuery.</p>
+            <a class="bk" href='javascript:(function(){var%20el=document.createElement(%22div%22),b=document.getElementsByTagName(%22body%22)[0],otherlib=!1,msg=%22%22;el.style.position=%22fixed%22,el.style.height=%2232px%22,el.style.width=%22220px%22,el.style.marginLeft=%22-110px%22,el.style.top=%220%22,el.style.left=%2250%25%22,el.style.padding=%225px%2010px%22,el.style.zIndex=1001,el.style.fontSize=%2212px%22,el.style.color=%22#222%22,el.style.backgroundColor=%22#f99%22;function%20showMsg(){var%20txt=document.createTextNode(msg);el.appendChild(txt),b.appendChild(el),window.setTimeout(function(){txt=null,typeof%20jQuery==%22undefined%22?b.removeChild(el):(jQuery(el).fadeOut(%22slow%22,function(){jQuery(this).remove()}),otherlib&&(window.$jq=jQuery.noConflict()))},2500)}if(typeof%20jQuery!=%22undefined%22)return%20msg=%22This%20page%20already%20using%20jQuery%20v%22+jQuery.fn.jquery,showMsg();typeof%20$==%22function%22&&(otherlib=!0);function%20getScript(url,success){var%20script=document.createElement(%22script%22);script.src=url;var%20head=document.getElementsByTagName(%22head%22)[0],done=!1;script.onload=script.onreadystatechange=function(){!done&&(!this.readyState||this.readyState==%22loaded%22||this.readyState==%22complete%22)&&(done=!0,success(),script.onload=script.onreadystatechange=null,head.removeChild(script))},head.appendChild(script)}getScript(%22http://code.jquery.com/jquery.min.js%22,function(){return%20typeof%20jQuery==%22undefined%22?msg=%22Sorry,%20but%20jQuery%20was%20not%20able%20to%20load%22:(msg=%22This%20page%20is%20now%20jQuerified%20with%20v%22+jQuery.fn.jquery,otherlib&&(msg+=%22%20and%20noConflict().%20Use%20$jq(),%20not%20$().%22)),showMsg()})})();'>jQuerify</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Element Info</h2>
+            <p>View the element type, ids, and classes of an element.</p>
+            <a class="bk" href="javascript:(function (){    var nStyle, dispID, dispClass, dispTag, showString;    var body=document.getElementsByTagName('BODY')[0];    var newDiv=[];    var numDivs=0;    var elems=document.getElementsByTagName('*');    (function addHover(){        for (var i=0;i<elems.length;i++) {                elems[i].addEventListener('mouseenter',elemShow);                elems[i].addEventListener('mouseleave',elemRem);        }    })();    function elemShow(){        numDivs++;        dispID=this.id;        dispClass=this.className;        dispTag='\&#60;'+this.tagName+'\&#62;';        showString=' Element: '+dispTag+'\&nbsp;&nbsp;&nbsp; ID: '+dispID+'\&nbsp;&nbsp;&nbsp; Class(es): '+dispClass;        newDiv[numDivs]=document.createElement('div');        newDiv[numDivs].innerHTML='';        newDiv[numDivs].id='id'+numDivs;        nStyle=newDiv[numDivs].style;        nStyle.fontFamily='monospace';        nStyle.color='black';        nStyle.display='inline-block';        nStyle.position='fixed';        nStyle.fontSize='0.9em';        nStyle.fontSize='0.9rem';        nStyle.height='1.1em';        nStyle.height='1.1rem';        nStyle.width='100%';        nStyle.zIndex=(999999+numDivs);        nStyle.left='0px';        nStyle.top='0px';         nStyle.backgroundColor='lightyellow';        nStyle.margin='0px';        nStyle.padding='1px';        newDiv[numDivs].innerHTML=showString;        body.insertBefore(newDiv[numDivs], body.firstChild);    }    function elemRem() {        body.removeChild(document.getElementById('id'+numDivs));        newDiv[numDivs].id='';        numDivs--;    }})();">Element Info</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Kill Element</h2>
+            <p>Delete any element on a page.</p>
+            <a class="bk" href="javascript:for(var i=0; i<(document.getElementsByTagName('a')).length; i++) {(document.getElementsByTagName('a')[i]).style.pointerEvents = 'none';}function handler(e) {e = e || window.event;var target = e.target || e.srcElement;target.style.display = 'none';document.removeEventListener('click', handler, false);cursor('default');for(var i=0; i<(document.getElementsByTagName('a')).length; i++) {(document.getElementsByTagName('a')[i]).style.pointerEvents = 'initial';}}document.addEventListener('click', handler, false);cursor('crosshair');function cursor(cur) { document.body.style.cursor = cur; }">Kill Element</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Color Elements</h2>
+            <p>Drag color onto any element.</p>
+            <a class="bk" href='javascript:(function(){var el=document.createElement("script");el.type="text/javascript";el.src="https://rawgit.com/ApoorvSaxena/colordrop/master/dist/production.min.js";el.onerror=function(){alert("Looks like the Content Security Policy directive is blocking the use of bookmarklets\n\nYou can copy and paste the content of:\n\n\"https://rawgit.com/ApoorvSaxena/colordrop/master/dist/production.min.js\"\n\ninto your console instead\n\n(link is in console already)");console.log("https://rawgit.com/ApoorvSaxena/colordrop/master/dist/production.min.js");};document.getElementsByTagName("body")[0].appendChild(el);})();'>Color Elements</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Rearrange</h2>
+            <p>Rearrange elements on a page.</p>
+            <a class="bk" href='' id="rearrange">Rearrange</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Edit Page</h2>
+            <p>Allows you to edit the text on a site.</p>
+            <a class="bk" href="javascript:document.body.contentEditable%20=%20'true';%20document.designMode='on';%20void%200">Edit Page</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>CSS Stats</h2>
+            <p>Opens the current page in the CSS Stats website.</p>
+            <a class="bk" href="javascript:location.href='http://cssstats.com/stats?url='+window.location.href">CSS Stats</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>MXToolbox DNS Lookup</h2>
+            <p>Shows the dns records of the current site.</p>
+            <a class="bk" href="javascript:location.href='https://mxtoolbox.com/SuperTool.aspx?action=a%3a'+window.location.hostname+'&run=toolpage'">DNS Lookup</a>
+          </span>https://search.google.com/test/rich-results?url=
+          <span class="bookmarklet">
+            <h2>Responsinator</h2>
+            <p>Opens the current site in <a href="https://www.responsinator.com">responsinator.com</a>.</p>
+            <a class="bk" href="javascript:location.href='http://www.responsinator.com/?url='+window.location.href">Responsinator</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Structured Data Testing Tool</h2>
+            <p>Opens the current site in Google's Structured Data Testing Tool. This will be depreciated soon, so keep that in mind when using it.</p>
+            <a class="bk" href="javascript:location.href='https://search.google.com/structured-data/testing-tool#url='+window.location.href">Structured Data Testing Tool</a>
+          </span>
+        </span>
+        
+        <span><h1>- Utilities // Miscellaneous -</h1>
+        
+          <span class="bookmarklet">
+            <h2>Tinyurl</h2>
+            <p>Converts the current page to a Tinyurl.</p>
+            <a class="bk" href="javascript:void(open('http://tinyurl.com/create.php?url='+encodeURIComponent(location.href)))">Tinyurl</a>
+          </span>
+            <span class="bookmarklet">
+            <h2>Waterize</h2>
+            <p>The Waterize bookmarklet can be used to make ugly websites more readable by replacing the styles with Water.css (Note: Only use on ugly sites!!!).</p>
+            <a class="bk" href="javascript:void%20function(){const%20a=a=%3Edocument.querySelectorAll(a),b=(a,b)=%3EObject.assign(document.createElement(a),b);a(%22link[rel=\%22stylesheet\%22],style%22).forEach(a=%3Ea.remove()),a(%22*%22).forEach(a=%3Ea.style=%22%22),document.head.append(b(%22link%22,{rel:%22stylesheet%22,href:%22//cdn.jsdelivr.net/npm/water.css%402/out/water.css%22}),!a(%22meta[name=\%22viewport\%22]%22).length%26%26b(%22meta%22,{name:%22viewport%22,content:%22width=device-width,initial-scale=1.0%22}))}();">Waterize</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Kill Sticky</h2>
+            <p>Attempts to remove the sticky navigation bars.</p>
+            <a class="bk" href="javascript:(function()%7B(function%20()%20%7Bvar%20i%2C%20elements%20%3D%20document.querySelectorAll('body%20*')%3Bfor%20(i%20%3D%200%3B%20i%20%3C%20elements.length%3B%20i%2B%2B)%20%7Bif%20(getComputedStyle(elements%5Bi%5D).position%20%3D%3D%3D%20'fixed')%20%7Belements%5Bi%5D.parentNode.removeChild(elements%5Bi%5D)%3B%7D%7D%7D)()%7D)()">Kill Sticky</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Stop Pop-ups</h2>
+            <p>Attempts to remove timed pop-ups.</p>
+            <a class="bk" href="javascript:window.onload=window.onunload=window.onbeforeunload=null;window.close();//%20Copyright%202000%20SiteExperts.com">Stop Pop-ups</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Ad-B-Gone</h2>
+            <p>Bookmarklet that removes obnoxious ads from pages.</p>
+            <a class="bk" href="" id="adremover">Ad-B-Gone</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Zap Plugins</h2>
+            <p>Removes java, flash, background music, and third-party iframes.</p>
+            <a class="bk" href='javascript:(function(){function R(w){try{var d=w.document,j,i,t,T,N,b,r=1,C;for(j=0;t=["object","embed","applet","iframe"][j];++j){T=d.getElementsByTagName(t);for(i=T.length-1;(i+1)&&(N=T[i]);--i)if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView)){b=d.createElement("div");b.style.width=N.width; b.style.height=N.height;b.innerHTML="<del>"+(j==3?"third-party "+t:t)+"</del>";N.parentNode.replaceChild(b,N);}}}catch(E){r=0}return r}R(self);var i,x;for(i=0;x=frames[i];++i)R(x)})()'>Zap Plugins</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Zap Colors</h2>
+            <p>Makes text black on a white background, and makes links blue and purple.</p>
+            <a class="bk" href="" id="zapcolors">Zap Colors</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Zap Cheap Effects</h2>
+            <p>Neutralizes &lt;marquee&gt; and &lt;blink&gt;.</p>
+            <a class="bk" href='javascript:(function(){var d=document; function K(N,w) { var nn = d.createElement(w), C = N.childNodes, i; for(i=C.length-1;i>=0;--i) nn.insertBefore(C[i],nn.childNodes[0]); N.parentNode.replaceChild(nn,N); } function Z(t,w) { var T = document.getElementsByTagName(t), j; for (j=T.length-1;j>=0;--j) K(T[j],w); } Z("blink", "span"); Z("marquee", "div"); })();'>Zap Cheap Effects</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Zap Events</h2>
+            <p>Removes event handlers, killing blind links and exit pop-up ads.</p>
+            <a class="bk" href='javascript:(function(){var H=["mouseover","mouseout","unload","resize"],o=window.opera; if(document.addEventListener/*MOZ*/&&!o) for(j in H)document.addEventListener(H[j],function(e){e.stopPropagation();},true); else if(window.captureEvents/*NS4*/&&!o) { document.captureEvents(-1/*ALL*/);for(j in H)window["on"+H[j]]=null;} else/*IE*/ {function R(N){var i,x;for(j in H)if(N["on"+H[j]]/*NOT TEXTNODE*/)N["on"+H[j]]=null;for(i=0;x=N.childNodes[i];++i)R(x);}R(document);}})()'>Zap Events</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Zap Timers</h2>
+            <p>Removes timers that were created with setTimeout or setInterval.</p>
+            <a class="bk" href='javascript:(function() { var c, tID, iID; tID = setTimeout(function(){}, 0); for (c=1; c<1000 && c<=tID; ++c) clearTimeout(tID - c); iID = setInterval(function(){},1000); for (c=0; c<1000 && c<=iID; ++c) clearInterval(iID - c); })()'>Zap Timers</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Zap Images</h2>
+            <p>Replaces each image with its alternate text.</p>
+            <a class="bk" href="javascript:(function(){function toArray (c){var a, k;a=new Array;for (k=0; k < c.length; ++k)a[k]=c[k];return a;}var images, img, altText;images=toArray(document.images);for (var i=0; i < images.length; ++i){img=images[i];altText=document.createTextNode(img.alt);img.parentNode.replaceChild(altText, img)}})();">Zap Images</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Zap</h2>
+            <p>Zaps plugins, colors, cheap effects, event handlers, and timers.</p>
+            <a class="bk" href="" id="zap">Zap</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Wayback Machine</h2>
+            <p>Shows the current website entries in the Wayback Machine.</p>
+            <a class="bk" href="javascript:location.href='http://web.archive.org/web/*/'+window.location.href">Wayback Machine</a>
+          </span>
+          <span class="bookmarklet">
+            <h2>Dark Mode</h2>
+            <p>A simple dark mode, but with a bookmarklet.</p>
+            <a class="bk" href='javascript:(function(){function invert(o,t){var r=o.split("("),n=r[1].split(")")[0].split(",");return n.forEach(function(o,r){r<3&&(n[r]="color"==t&&255-parseInt(o)<50?120:255-parseInt(o))}),n=n.join(","),r[0]+"("+n+")"}document.querySelectorAll("*:not([invTouch])").forEach(function(o){var t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,"back"),o.style.color=invert(t.color,"color"),o.setAttribute("invTouch","true")});})();'>Dark Mode</a>
+          </span>
+        </span>
+        
+        
+        
+        <hr>
+        <span><h1>- Generators -</h1>
+          <p>This section has generators made by Basil, but with the bookmarklet base code from other programmers.</p>
+          
+          <span class="generator" id="cloaker">
+            <h2>Cloaker</h2>
+            <p>Changes the title and the favicon (the name of the tab and the icon) to whatever you set here. You can use a url of the website that you want to use the favicon of, eg <b>youtube.com</b>. You can also leave them empty if you like.</p>
+            <p><b>Title</b></p>
+            <input placeholder="YouTube" id="title">
+            
+            <p><b>URL</b></p>
+            <select id="type">
+              <option value="fav-image">Path to image</option>
+              <option value="fav-url">URL of website</option>
+            </select><br>
+            <input placeholder="youtube.com" id="url">
+            
+            <p><b>Refresh rate</b></p>
+            <p class="smoldesc">How often to set the favicon and title, in milliseconds. This is for when a site reverts its title and favicon. "1000" would be every second, "60000" would be every minute. Defaults to 1000.</p>
+            <input placeholder="1000" id="refresh"><br><br>
+            
+            <button id="generate">Generate</button>
+            
+            <span id="gen-code"></span>
+            <script>
+              $('#cloaker button#generate').on('click', (e) => {
+                var title = $("#cloaker input#title").val();
+                var faviconType = $("#cloaker select#type").val();
+                var faviconURL = $("#cloaker input#url").val();
+                var refreshRate = $("#cloaker input#refresh").val();
+                var favicon = "";
+                switch (faviconType) {
+                  case "fav-image":
+                    favicon = faviconURL;
+                    break;
+                  case "fav-url":
+                    favicon = "https://www.google.com/s2/favicons?domain=" + faviconURL;
+                    break;
+                }
+                
+                if (refreshRate == "") {
+                  refreshRate = 1000;
+                }
+                
+                var short = "javascript:(function() { setInterval(function() { var link = document.querySelector('link[rel*=\"icon\"]') || document.createElement('link'); link.type = 'image/x-icon'; link.rel = 'shortcut icon'; link.href = '" + favicon + "'; document.getElementsByTagName('head')[0].appendChild(link); document.title = '" + title + "';}, " + refreshRate + "); })();";
+
+                var long = `  function() {
+    setInterval(function() {
+      var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = '${favicon}';
+      document.getElementsByTagName('head')[0].appendChild(link);
+      document.title = '${title}';
+    }, ${refreshRate});
+  }`;
+                $('#cloaker span#gen-code').empty();
+                $('#cloaker span#gen-code').append('<br><br><a class="bk" id="gen-cloaker">Cloaker</a>');
+                document.getElementById("gen-cloaker").href=short;
+                $('#cloaker span#gen-code').append('<pre><code class="javascript">' + short + '</code></pre>');
+                $('#cloaker span#gen-code').append('<pre><code class="javascript">' + long + '</code></pre>');
+                document.querySelectorAll('pre code').forEach((block) => {
+                  hljs.highlightBlock(block);
+                });
+              });
+                
+            </script>
+          </span>
+        
+        </span>
+        
+        <span><h1>- Bookmarklet Maker -</h1>
+          <p>Use the embed below, or go to the <a href="https://old.gbasil.dev/maker">page</a></p>
+          <iframe src="https://old.gbasil.dev/maker/embed.html" style="width: 100%; height: 718px"></iframe>
+        </span>
+        
+        <script>
+          $('a#console').attr("href",`javascript:(function()%7Bfunction grouped(e%2C n)%7B if(e !%3D null)%7B return e%5Bn%5D.toString()%3B %7Delse%7B return ''%3B %7D %7D function dragElement(elmnt) %7B var pos1 %3D 0%2C pos2 %3D 0%2C pos3 %3D 0%2C pos4 %3D 0%3B if (document.getElementById(elmnt.id %2B "header")) %7B document.getElementById(elmnt.id %2B "header").onmousedown %3D dragMouseDown%3B %7D else %7B elmnt.onmousedown %3D dragMouseDown%3B %7D function dragMouseDown(e) %7B e %3D e %7C%7C window.event%3B pos3 %3D e.clientX%3B pos4 %3D e.clientY%3B document.onmouseup %3D closeDragElement%3B document.onmousemove %3D elementDrag%3B %7D function elementDrag(e) %7B e %3D e %7C%7C window.event%3B pos1 %3D pos3 - e.clientX%3B pos2 %3D pos4 - e.clientY%3B pos3 %3D e.clientX%3B pos4 %3D e.clientY%3B elmnt.style.top %3D (elmnt.offsetTop - pos2) %2B "px"%3B elmnt.style.left %3D (elmnt.offsetLeft - pos1) %2B "px"%3B elmnt.style.opacity %3D "0.85"%3B elmnt.style.background %3D "DarkSlateGrey"%3B elmnt.style.transition %3D "opacity 1300ms" %7D function closeDragElement() %7B document.onmouseup %3D null%3B document.onmousemove %3D null%3B elmnt.style.opacity %3D "1"%3B elmnt.style.background %3D "DarkSlateGrey"%3B %7D %7D function close() %7B document.body.removeChild(document.getElementById("pop_container"))%3B %7D var cDiv %3D document.createElement("div")%3B cDiv.setAttribute("id"%2C "pop_container")%3B document.body.appendChild(cDiv)%3B cDiv.style.display %3D "inline-block"%3B cDiv.style.position %3D "fixed"%3B cDiv.style.top %3D "300px"%3B cDiv.style.left %3D "50%25"%3B cDiv.style.width %3D "35%25"%3B cDiv.style.height %3D "43%25"%3B cDiv.style.border %3D "1px solid DarkSlateGrey "%3B cDiv.style.background %3D "DarkSlateGrey"%3B cDiv.style.borderRadius %3D "1em"%3B cDiv.style.padding %3D "3px"%3B cDiv.style.zIndex %3D "10000"%3B cDiv.style.fontFamily %3D '"Courier New"%2C monospace'%3B var clsBtn %3D document.createElement("button")%3B document.getElementById("pop_container").appendChild(clsBtn)%3B clsBtn.setAttribute("id"%2C "btn_close")%3B document.getElementById("btn_close").innerText %3D "%2B"%3B clsBtn.style.position %3D "absolute"%3B clsBtn.style.background %3D "transparent"%3B clsBtn.style.height %3D "0px"%3B clsBtn.style.width %3D "0px"%3B clsBtn.style.display %3D "inline-block"%3B clsBtn.style.transform %3D "scale(2.5%2C 2.5) translate(5px%2C -5px) rotate(45deg)"%3B clsBtn.style.borderRadius %3D "1em"%3B clsBtn.style.padding %3D "0px"%3B clsBtn.style.boxShadow %3D "0px"%3B clsBtn.style.border %3D "0px"%3B clsBtn.style.cursor %3D "pointer"%3B clsBtn.style.userSelect %3D "none"%3B clsBtn.style.fontFamily %3D '"Courier New"%2C monospace'%3B clsBtn.style.fontWeight %3D "bold"%3B clsBtn.style.color %3D "white"%3B var textbox_1 %3D document.createElement("TEXTAREA")%3B textbox_1.setAttribute("id"%2C "textbox_code")%3B document.getElementById("pop_container").appendChild(textbox_1)%3B textbox_1.style.width %3D "99%25"%3B textbox_1.style.height %3D "83%25"%3B textbox_1.style.padding %3D "6px"%3B textbox_1.style.border %3D "1px solid DarkSlateGrey"%3B textbox_1.style.background %3D "FloralWhite"%3B textbox_1.style.borderRadius %3D "1em"%3B textbox_1.style.display %3D "block"%3B textbox_1.style.fontSize %3D "1.2em"%3B textbox_1.style.userSelect %3D "none"%3B textbox_1.style.transform %3D "translate(0px%2C 5%25)"%3B textbox_1.style.fontFamily %3D '"Courier New"%2C monospace'%3B var evalBtn %3D document.createElement("button")%3B document.getElementById("pop_container").appendChild(evalBtn)%3B evalBtn.setAttribute("id"%2C "btn_box")%3B document.getElementById("btn_box").innerText %3D "runTheCode"%3B evalBtn.style.background %3D "DarkCyan"%3B evalBtn.style.border %3D "1px solid DarkSlateGrey"%3B evalBtn.style.width %3D "100%25"%3B evalBtn.style.height %3D "33px"%3B evalBtn.style.borderRadius %3D "1em"%3B evalBtn.style.cursor %3D "pointer"%3B evalBtn.style.color %3D "white"%3B evalBtn.style.transform %3D "translate(0px%2C 55%25)"%3B dragElement(document.getElementById(("pop_container")))%3B document.getElementById("btn_box").addEventListener("click"%2C execute)%3B document.getElementById("btn_close").addEventListener("click"%2C close)%3B textbox_1.addEventListener('keyup'%2C tabIs)%3B function tabIs()%7B if(%2F%5C%7B%5C%7D%2F.exec(this.value) %3D%3D "%7B%7D")%7B this.value %3D this.value.replace(%2F%5C%7B%5C%7D%2F%2C "%7B%5Cn %5Cn%7D")%3B this.selectionStart %3D this.selectionStart-2%3B this.selectionEnd %3D this.selectionEnd-2%3B this.focus()%3B %7D %7D function execute()%7B var code %3D document.getElementById("textbox_code").value%3B eval(code)%3B %7D%7D)()`);
+          $('a#rearrange').attr("href", `javascript:/*dragon*/var b=X=Y=T=L=0;document.addEventListener("click",function(a){a.preventDefault()},!0);document.addEventListener("mousedown",c);document.addEventListener("touchstart",c);function c(a){a.preventDefault();a.target!==document.documentElement&&a.target!==document.body&&(b=Date.now(),a.target.setAttribute("data-drag",b),a.target.style.position="relative",T=a.target.style.top.split("px")[0]||0,L=a.target.style.left.split("px")[0]||0);X=a.clientX||a.touches[0].clientX;Y=a.clientY||a.touches[0].clientY}document.addEventListener("mousemove",d);document.addEventListener("touchmove",d);function d(a){if(""!==b){var e=document.querySelector('[data-drag="'+b+'"]');e.style.top=parseInt(T)+parseInt((a.clientY||a.touches[0].clientY)-Y)+"px";e.style.left=parseInt(L)+parseInt((a.clientX||a.touches[0].clientX)-X)+"px"}}document.addEventListener("mouseup",f);document.addEventListener("touchend",f);function f(){b=""}document.addEventListener("mouseover",g);function g(a){a.target.style.cursor="move";a.target.style.boxShadow="inset lime 0 0 1px,lime 0 0 1px"}document.addEventListener("mouseout",h);function h(a){a.target.style.cursor=a.target.style.boxShadow=""};`);
+          $('a#adremover').attr("href", `javascript:(function(){ /* Ad-B-Gone: Bookmarklet that removes obnoxious ads from pages */ var selectors = [ /* By ID: */ '#sidebar-wrap', '#advert', '#xrail', '#middle-article-advert-container', '#sponsored-recommendations', '#around-the-web', '#sponsored-recommendations', '#taboola-content', '#taboola-below-taboola-native-thumbnails', '#inarticle_wrapper_div', '#rc-row-container', '#ads', '#at-share-dock', '#at4-share', '#at4-follow', '#right-ads-rail', 'div#ad-interstitial', 'div#advert-article', /* By Class: */ '.ad', '.avert', '.avert__wrapper', '.middle-banner-ad', '.advertisement', '.GoogleActiveViewClass', '.advert', '.cns-ads-stage', '.teads-inread', '.ad-banner', '.ad-anchored', '.js_shelf_ads', '.ad-slot', '.antenna', '.xrail-content', '.advertisement__leaderboard', '.ad-leaderboard', '.trc_rbox_outer', '.ks-recommended', '.article-da', 'div.sponsored-stories-component', 'div.addthis-smartlayers', 'div.article-adsponsor', 'div.signin-prompt', 'div.article-bumper', 'div.video-placeholder', 'div.top-ad-container', 'div.header-ad', 'div.ad-unit', 'div.demo-block', 'div.OUTBRAIN', 'div.ob-widget', 'div.nwsrm-wrapper', 'div.announcementBar', 'div.partner-resources-block', 'div.arrow-down', 'div.m-ad', 'div.story-interrupt', 'div.taboola-recommended', 'div.ad-cluster-container', 'div.ctx-sidebar', 'div.incognito-modal', /* Other: */ 'script', 'iframe', 'video', 'aside#sponsored-recommendations', 'aside[role="banner"]', 'amp-ad', 'span[id^=ad_is_]', 'div[class*="indianapolis-optin"]', 'div[id^=google_ads_iframe]', 'div[data-google-query-id]', 'section[data-response]' ]; for(let i in selectors) { let nodesList = document.querySelectorAll(selectors[i]); for(let i = 0; i < nodesList.length; i++) { let el = nodesList[i]; if(el && el.parentNode) el.parentNode.removeChild(el); } } })();`);
+          $('a#zapcolors').attr("href", `javascript:(function(){var newSS, styles='* { background: white ! important; color: black !important } :link, :link * { color: #0000EE !important } :visited, :visited * { color: #551A8B !important }'; if(document.createStyleSheet) { document.createStyleSheet("javascript:'"+styles+"'"); } else { newSS=document.createElement('link'); newSS.rel='stylesheet'; newSS.href='data:text/css,'+escape(styles); document.getElementsByTagName("head")[0].appendChild(newSS); } })();`);
+          $("a#zap").attr("href", `javascript:(function(){function R(w){try{var d=w.document,j,i,t,T,N,b,r=1,C;for(j=0;t=["object","embed","applet","iframe"][j];++j){T=d.getElementsByTagName(t);for(i=T.length-1;(i+1)&&(N=T[i]);--i)if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView)){b=d.createElement("div");b.style.width=N.width; b.style.height=N.height;b.innerHTML="<del>"+(j==3?"third-party "+t:t)+"</del>";N.parentNode.replaceChild(b,N);}}}catch(E){r=0}return r}R(self);var i,x;for(i=0;x=frames[i];++i)R(x)})(); javascript:(function(){var newSS, styles='* { background: white ! important; color: black !important } :link, :link * { color: #0000EE !important } :visited, :visited * { color: #551A8B !important }'; if(document.createStyleSheet) { document.createStyleSheet("javascript:'"+styles+"'"); } else { newSS=document.createElement('link'); newSS.rel='stylesheet'; newSS.href='data:text/css,'+escape(styles); document.getElementsByTagName("head")[0].appendChild(newSS); } })(); javascript:(function(){var d=document; function K(N,w) { var nn = d.createElement(w), C = N.childNodes, i; for(i=C.length-1;i>=0;--i) nn.insertBefore(C[i],nn.childNodes[0]); N.parentNode.replaceChild(nn,N); } function Z(t,w) { var T = document.getElementsByTagName(t), j; for (j=T.length-1;j>=0;--j) K(T[j],w); } Z("blink", "span"); Z("marquee", "div"); })(); javascript:(function(){var H=["mouseover","mouseout","unload","resize"],o=window.opera; if(document.addEventListener/*MOZ*/&&!o) for(j in H)document.addEventListener(H[j],function(e){e.stopPropagation();},true); else if(window.captureEvents/*NS4*/&&!o) { document.captureEvents(-1/*ALL*/);for(j in H)window["on"+H[j]]=null;} else/*IE*/ {function R(N){var i,x;for(j in H)if(N["on"+H[j]]/*NOT TEXTNODE*/)N["on"+H[j]]=null;for(i=0;x=N.childNodes[i];++i)R(x);}R(document);}})(); javascript:(function() { var c, tID, iID; tID = setTimeout(function(){}, 0); for (c=1; c<1000 && c<=tID; ++c) clearTimeout(tID - c); iID = setInterval(function(){},1000); for (c=0; c<1000 && c<=iID; ++c) clearInterval(iID - c); })();`);
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

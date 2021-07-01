@@ -108,6 +108,7 @@
         document.getElementById('loadingImage').style.visibility="visible";
     }
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body oncontextmenu="return false;" rel="preload" class="container" data-theme="dark">
     <center>
@@ -174,7 +175,7 @@ li a {
       <div class="social-media-div"><a href="https://github.com/TamoghnaK13" class="icon-button github" target="_blank"><i class="fab fa-github"></i><span></span></a><a href="mailto:tamoghnak13@gmail.com" class="icon-button google" target="_blank"><i class="fab fa-google"></i><span></span></a><a href="https://gitlab.com/" class="icon-button gitlab" target="_blank"><i class="fab fa-gitlab"></i><span></span></a><a href="https://stackoverflow.com/users/14726086/tamoghnak13" class="icon-button stack-overflow" target="_blank"><i class="fab fa-stack-overflow"></i><span></span></a></div><br></center><br>
     
       <h3><b>About Me:</b></h3><br>
-<small>I am a student, and I am learning languages such as HTML, CSS, JS (also NodeJS), etcetera <br>I also want to learn other languages like Python and Typescript <img alt="🚀" draggable="false" src="https://twemoji.maxcdn.com/2/72x72/1f680.png" style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;"></small><br>
+<small>I am a student, and I am learning languages such as HTML, CSS, JS (also NodeJS<img alt="⚡" draggable="false" src="https://twemoji.maxcdn.com/2/72x72/26a1.png" style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;">), etcetera <br>I also want to learn other languages like Python and Typescript <img alt="🚀" draggable="false" src="https://twemoji.maxcdn.com/2/72x72/1f680.png" style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;"></small><br>
         
 <!-- Trigger/Open The Modal -->
      <span>🢚 <button class=button" id="myBtn">More About Me</button> 🢘</span>
@@ -288,13 +289,13 @@ https://dribbble.com/shots/14101951-Banners-->
     </div>
          
     <div class="card card-5">
-      <div class="card__icon"><i style="color:white;" class="fas fa-bolt"></i></div>      <h2 class="card__title">This site that you are currently on which is www.tamoghnak.tk!</h2>
+      <div class="card__icon"><i style="color:white;" class="fas fa-bolt"></i></div>      <h2 class="card__title">This site that you are currently on which is www.tamoghnak.tk <img alt="⚡" draggable="false" src="https://twemoji.maxcdn.com/2/72x72/26a1.png" style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;"><img alt="⚡" draggable="false" src="https://twemoji.maxcdn.com/2/72x72/26a1.png" style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;"><img alt="⚡" draggable="false" src="https://twemoji.maxcdn.com/2/72x72/26a1.png" style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;"></h2>
     </div>
 
       
     <div id="p" class="card card-1">
       <div class="card__icon"><i style="color:white;" class="fas fa-bolt"></i></div>
-      <h2 class="card__title">History Project</h2>
+      <h2 class="card__title">Women's History Project</h2>
       <p class="card__apply"><a class="launch" href="https://whproject.repl.co/">Launch <i style="color:white;" class="fas fa-arrow-right"></i></a></p>
     </div>
 
@@ -335,6 +336,56 @@ https://dribbble.com/shots/14101951-Banners-->
         <b><a href="https://meet.google.com/linkredirect?dest=https://meet.google.com/linkredirect?dest=https://www.tamoghnak.tk">Google Meet Redirect To This Site!</a></b>-->
 
   </center>
+  <style>
+    #back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 65px;
+    right: 16px;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
+}
+</style>
+<script>
+  /*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+ /*Scroll to top when arrow up clicked END*/
+ </script>
+  <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
         <div class= "credits">
             <a style="color:white;"href="https://meet.google.com/linkredirect?dest=https://meet.google.com/linkredirect?dest=https://www.tamoghnak.tk">Coded by Tamoghna</a>
 </div>

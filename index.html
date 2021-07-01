@@ -130,26 +130,48 @@ li a {
     
 .icon-button{margin-bottom:10px}.icon-button i{color:#fff;border-radius:2.6rem;cursor:pointer;display:inline-block;font-size:1.3rem;height:2.6rem;line-height:2.6rem;position:relative;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:2.6rem;margin:0 5px 10px;-webkit-transition:.2s ease-in;transition:.2s ease-in}.facebook i{background-color:#3b5998}.linkedin i{background-color:#0e76a8}.github i{background-color:#333}.gitlab i{background-color:#fca326}.google i{background-color:#ea4335}.twitter i{background-color:#1da1f2}.medium i{background-color:#000}.stack-overflow i{background-color:#f48024}.instagram i{background-color:#c13584}.facebook i:hover,.github i:hover,.gitlab i:hover,.google i:hover,.instagram i:hover,.linkedin i:hover,.medium i:hover,.stack-overflow i:hover,.twitter i:hover{background-color:#000}@media (max-width:768px){.social-media-div{text-align:center}}.main-button{background-color:#55198b;border:2px solid #55198b;color:#fff;font-weight:700;width:-webkit-max-content;width:-moz-max-content;width:max-content;padding:13px 22px;margin-right:50px;text-transform:uppercase;border-radius:6px;text-align:center;text-decoration:none;display:block;margin-top:20px;font-size:16px;cursor:pointer;-webkit-transition:all .3s ease-in-out 0s;transition:all .3s ease-in-out 0s}.main-button:hover{background-color:#fff;color:#55198b;-webkit-transition:all .3s ease 0s;transition:all .3s ease 0s;-webkit-transform:translateY(-3px);transform:translateY(-3px)}.main-button-transparent{border:2px solid #55198b;color:#55198b;font-weight:700;width:-webkit-max-content;width:-moz-max-content;width:max-content;padding:13px 22px;margin-right:50px;text-transform:uppercase;border-radius:6px;text-align:center;text-decoration:none;display:block;margin-top:20px;font-size:16px;-webkit-transition:all .3s ease-in-out 0s;transition:all .3s ease-in-out 0s;cursor:pointer}.main-button-transparent:hover{background-color:#55198b;color:#fff;-webkit-transition:all .3s ease 0s;transition:all .3s ease 0s;-webkit-transform:translateY(-3px);transform:translateY(-3px)}
    
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+
+
+
 </style>
         
  <ul class="footer heading">
+  <li> </li>
   <li><a style="font-size:25px;float:left;" class="logo" href="/">Tamoghna Kommaraju</a></li>
+   <li><a style="float:right;"> <div class="controller-row">
+      <label class="switch">
+        <input id="toggler" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div></a></li>
   <li><a style="float:right;" href="/bookmarklets">Bookmarklets</a></li>
   <li><a style="float:right;" href="mailto:tamoghnak13@gmail.com">Contact</a></li>
   <li><a style="float:right;" href="#projects">Projects</a></li>
 </ul>
 
         <br><br><br><br>
-    <p><b>Welcome to www.tamoghnak.tk, which is the official website of Tamoghna Kommaraju (me).<br>I am also known online as Retrospicer and as TamoghnaK13.</b><br><br><center>
-      <div class="social-media-div"><a href="https://github.com/TamoghnaK13" class="icon-button github" target="_blank"><i class="fab fa-github"></i><span></span></a><a href="mailto:tamoghnak13@gmail.com" class="icon-button google" target="_blank"><i class="fab fa-google"></i><span></span></a><a href="https://gitlab.com/" class="icon-button gitlab" target="_blank"><i class="fab fa-gitlab"></i><span></span></a><a href="https://stackoverflow.com/users/14726086/tamoghnak13" class="icon-button stack-overflow" target="_blank"><i class="fab fa-stack-overflow"></i><span></span></a></div><br>
-  
-     <div class="controller-row">
-      <span>Toggle Light Mode -> &nbsp;<span>
-      <label class="switch">
-        <input id="toggler" type="checkbox">
-        <span class="slider round"></span>
-      </label>
-    </div></center></p><br>
+    <h1><b>Hi, I'm Tamoghna <span class="wave">👋</span></h1><small>I'm also known online as Retrospicer and TamoghnaK13.</small><br><br><center>
+      <div class="social-media-div"><a href="https://github.com/TamoghnaK13" class="icon-button github" target="_blank"><i class="fab fa-github"></i><span></span></a><a href="mailto:tamoghnak13@gmail.com" class="icon-button google" target="_blank"><i class="fab fa-google"></i><span></span></a><a href="https://gitlab.com/" class="icon-button gitlab" target="_blank"><i class="fab fa-gitlab"></i><span></span></a><a href="https://stackoverflow.com/users/14726086/tamoghnak13" class="icon-button stack-overflow" target="_blank"><i class="fab fa-stack-overflow"></i><span></span></a></div><br></center><br>
         
       <span><b>About Me:</b></span><br>
 <small>I am a student, and I am learning a various languages such as HTML, CSS, JS, etcetera (I also like NodeJS!)<br>I also want to learn other languages like Python and Typescript.</small><br>
@@ -205,7 +227,7 @@ https://dribbble.com/shots/14101951-Banners-->
 <div id="projects">
 <div class="main-container">
   <div class="heading-container">
-    <p class="credit"><a class="launch" target="_blank" href="https://github.com/TamoghnaK13">My Projects and Featured Content:</a></p>
+    <p class="credit">My Projects and Featured Content:</p>
   </div>
   <div class="card-container">
     <div class="card card-1">

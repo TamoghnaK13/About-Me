@@ -13,7 +13,52 @@
 <!-- GOOGLE TAG MANAGER VERSION -->
 <!-- Credit: https://twitter.com/SimoAhava/status/1001397355403468802 -->
 <!-- Source: https://github.com/JayHoltslander/Structured-Data-JSON-LD -->
-<script>
+
+<html>
+  <head>
+    <title>Award Winners</title>
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "name": "Pages"
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Bookmarklet Collection",
+        "item": "https://www.tamoghnak.tk/bookmarklets"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://www.tamoghnak.tk/#projects"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Award Winners"
+      }]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Literature",
+        "item": "https://example.com/literature"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Award Winners"
+      }]
+    }]
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
+<!-- <script>
 (function() {
    var jsonData =
 {
@@ -56,7 +101,7 @@
 "height": "66 inches",
 "weight": "97 pounds",
 "gender": "Male",
-"knowsLanguage": "English"
+"knowsLanguage": "English",
 "memberOf": "Boy Scouts of America",
 "Description": "Technology Enthusiast",
 "disambiguatingDescription": "Co-founder and Developer of Zatoga.",
@@ -92,9 +137,7 @@ el.type = 'application/ld+json';
 el.innerHTML = JSON.stringify(jsonData);
 document.head.appendChild(el);
 })();
-</script>
-
-
+</script> -->
     	<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.tamoghnak.tk/">

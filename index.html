@@ -271,6 +271,20 @@ li a {
     background-color: #DDF;
     color: #000;
 }
+
+.mobile { display: none; }
+@media (max-width: 834px) {
+    .mobile { display: block; }
+    .desktop { display: none; }
+}
+@media (max-width: 700px) {
+    .controller-row {display: none;}
+    .contact {display: none;}
+}
+@media (max-width: 558px) {
+    .project-nav {display: none;}
+}
+}
 </style>
     </head>
     <body oncontextmenu="return false;" class="container" data-theme="dark">
@@ -324,9 +338,9 @@ li a {
         <span class="slider round"></span>
       </label>
     </div></a></li>
-  <li><a style="float:right;" href="/bookmarklets">Bookmarklets</a></li>
-  <li><a style="float:right;" href="mailto:tamoghnak13@gmail.com">Contact</a></li>
-  <li><a style="float:right;" href="#projects">Projects</a></li>
+  <li><a style="float:right;" href="/bookmarklets" class="desktop">Bookmarklets</a></li>
+  <li><a style="float:right;" href="mailto:tamoghnak13@gmail.com" class="contact">Contact</a></li>
+  <li><a style="float:right;" href="#projects" class="project-nav">Projects</a></li>
 </ul>
 
         <br><br><br><br>
@@ -336,7 +350,7 @@ li a {
 <small>I am a student, and I am learning languages such as HTML, CSS, JS (also NodeJS⚡), etcetera <br>I also want to learn other languages like Python and Typescript 🚀</small><br>
         
 <!-- Trigger/Open The Modal -->
-     <span>🢚 <button class=button" id="myBtn">More About Me</button> 🢘</span>
+     <span class="desktop">🢚 <button class="desktop" id="myBtn">More About Me</button> 🢘</span>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">

@@ -2,6 +2,15 @@ a, span, div, p, b, hr, small, h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
+st-total {
+  color:black;
+}
+st-shares {
+  color:black;
+}
+st-label {
+  color:black;
+}
 
 /*** Light Mode Theme ***/
 :root, [data-theme="light"] {

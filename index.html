@@ -241,7 +241,7 @@
 </ul>
 
         <br><br><br><br>
-    <h1><b>Hi, I'm Tamoghna Kommaraju <span class="wave">👋</span></h1><small>I'm also known online as Retrospicer and TamoghnaK13.</small><br><br><center>
+    <h1><b>Hi, I'm <span onclick="window.location.href='/myname.html'">Tamoghna</span> Kommaraju <span class="wave">👋</span></h1><small>I'm also known online as Retrospicer and TamoghnaK13.</small><br><br><center>
       <div class="social-media-div"><a href="https://github.com/TamoghnaK13" class="icon-button github" target="_blank"><i class="fab fa-github"></i><span></span></a><a href="mailto:tamoghnak13@gmail.com" class="icon-button google" target="_blank"><i class="fab fa-google"></i><span></span></a><a href="https://gitlab.com/" class="icon-button gitlab" target="_blank"><i class="fab fa-gitlab"></i><span></span></a><a href="https://stackoverflow.com/users/14726086/tamoghnak13" class="icon-button stack-overflow" target="_blank"><i class="fab fa-stack-overflow"></i><span></span></a></div><br></center>
       <h3><b>About Me:</b></h3><br>
 <!-- Start Share Buttons (Left Side) http://platform-ui-exp-staging-lb.global.unified-prod.sharethis.net/sticky-share-buttons -->
@@ -409,6 +409,62 @@ https://dribbble.com/shots/14101951-Banners-->
 </div>   <!-- Coded by Tamoghna -->
     <script src="https://whproject.repl.co/script.js"></script>
 
+<script>
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+  /*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+ /*Scroll to top when arrow up clicked END*/
+
+
+   // On toggler clicked
+
+var container = document.getElementsByClassName('container')[0];
+document.getElementById('toggler').addEventListener('change', (event) => {
+  console.log(toggler)
+  event.target.checked ? container.removeAttribute('data-theme') : container.setAttribute('data-theme', 'dark');
+});
+</script>
  <!--   <script>
     function autoRefresh()
     {

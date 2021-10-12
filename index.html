@@ -9,7 +9,6 @@
     <meta name="description" content="Welcome to www.tamoghnak.tk, which is the official portfolio and project website of Tamoghna Kommaraju, who is also known online as Retrospicer and as TamoghnaK13.">
     <meta itemprop="name" content="Tamoghna Kommaraju">
     <meta itemprop="description" content="Welcome to www.tamoghnak.tk, which is the official portfolio and project website of Tamoghna Kommaraju, who is also known online as Retrospicer and as TamoghnaK13.">
-
 <link rel="canonical" href="https://www.tamoghnak.tk/">
 
 <!-- GOOGLE TAG MANAGER VERSION -->
@@ -209,7 +208,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6111a590ec7e08001251869b&product=sticky-share-buttons" async="async"></script>
+<!-- <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6111a590ec7e08001251869b&product=sticky-share-buttons" async="async"></script> -->
 
     <!-- PushAlert
         <script type="text/javascript">
@@ -302,8 +301,8 @@ https://dribbble.com/shots/14101951-Banners-->
     </div>
     <div class="card card-3">
       <div class="card__icon"><i style="color:white;" class="fas fa-bolt"></i></div>
-      <h2 class="card__title">(Under Construction) Krypton, a video meeting web application.</h2>
-      <p class="card__apply"><a class="launch" href="https://krypton.retrospicer.repl.co/">Go to Krypton <i class="fas fa-arrow-right" style="color:white;"></i></a></p>
+      <h2 class="card__title">SwagSchool, a helpful tool to use with your friends.</h2>
+      <p class="card__apply"><a class="launch" onclick="incognito()">Go to SwagSchool <i class="fas fa-arrow-right" style="color:white;"></i></a></p>
     </div>
      <div class="card card-4">
       <div class="card__icon"><i style="color:white;" class="fas fa-bolt"></i></div>
@@ -372,6 +371,13 @@ https://dribbble.com/shots/14101951-Banners-->
       <h2 class="card__title">Essay Management</h2>
       <p class="card__apply"><a class="launch" href="/ihateessays.html">Launch <i style="color:white;" class="fas fa-arrow-right"></i></a></p>
     </div>
+
+    <div id="p" class="card card-1">
+      <div class="card__icon"><i style="color:white;" class="fas fa-bolt"></i></div>
+      <h2 class="card__title">SwagSchool (BETA)</h2>
+      <p class="card__apply"><a class="launch" href="https://swagschool.retrospicer.repl.co/">Launch <i style="color:white;" class="fas fa-arrow-right"></i></a></p>
+    </div>
+
   </div>
 </div>
 </div>
@@ -412,7 +418,13 @@ https://dribbble.com/shots/14101951-Banners-->
             <a style="color:white;"href="https://meet.google.com/linkredirect?dest=https://meet.google.com/linkredirect?dest=https://www.tamoghnak.tk">&copy; 2021 Tamoghna K.</a>
 </div>   <!-- Coded by Tamoghna -->
     <script src="https://whproject.repl.co/script.js"></script>
-
+ <script>
+      function incognito() {
+        let moveScript = `if(event.data["width"] && event.data["height"]){let width=1500;let height=1000;window.resizeTo(width + window.outerWidth - window.innerWidth, height + window.outerHeight - window.innerHeight);}`;
+        var zatogaWindow = window.open(``,`swagschool`,`width=1500,height=1000`);
+        zatogaWindow.document.write(`<style>body {margin: 0;}</style><title>SwagSchool</title><iframe width='100%' height='100%' src='https://swagschool.retrospicer.repl.co/' frameborder='0'></iframe><script>window.addEventListener("message", (event) => {` + moveScript + `}, false);</scr`+`ipt>`);
+      }
+      </script>
 <script>
   // Get the modal
 var modal = document.getElementById("myModal");

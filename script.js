@@ -53,10 +53,3 @@ document.getElementById('toggler').addEventListener('change', (event) => {
   event.target.checked ? container.removeAttribute('data-theme') : container.setAttribute('data-theme', 'dark');
 });
 
-//swagschool
-      function incognito() {
-        let moveScript = `if(event.data["width"] && event.data["height"]){let width=1500;let height=1000;window.resizeTo(width + window.outerWidth - window.innerWidth, height + window.outerHeight - window.innerHeight);}`;
-        var zatogaWindow = window.open(``,`swagschool`,`width=1500,height=1000`);
-        zatogaWindow.document.write(`<style>body {margin: 0;}</style><title>SwagSchool</title><iframe width='100%' height='100%' src='https://swagschool.retrospicer.repl.co/' frameborder='0'></iframe><script>window.addEventListener("message", (event) => {` + moveScript + `}, false);</scr`+`ipt>`);
-      }
-  
